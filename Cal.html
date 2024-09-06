@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.js Calculator</title>
+    <link rel="stylesheet" href="Cal.css">
+    <link rel="icon" href="/budget.png" type="image/x-icon">
+</head>
+<body style="background-color: dimgrey;">
+
+    <div id="app">
+        <div class="calculator">
+            <div class="display">{{ display }}</div>
+            <div class="buttons">
+                <button v-for="button in buttons" :key="button" @click="handleClick(button)">
+                    {{ button }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="Cal.js"></script>
+</body>
+</html>
